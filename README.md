@@ -13,6 +13,9 @@ git clone https://github.com/Sbector/paricutin.git
 then run:
 
 ```bash
+// install dependencies
+npm install
+// run on dev mode
 npm run dev
 ```
 
