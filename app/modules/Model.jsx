@@ -5,8 +5,8 @@ import { useFrame } from "@react-three/fiber"
 export default function Model() {
   const ref = useRef();
   useFrame((_,delta)=> {
-    ref.current.rotation.x += 0.001* delta
-    ref.current.rotation.y += 0.001* delta
+    ref.current.rotation.x += 0.05* delta
+    ref.current.rotation.y += 0.05* delta
   })
   const url = "./models/paricutinWeb.glb";
   const gltf = useGLTF(url);
@@ -18,7 +18,7 @@ export default function Model() {
         ref = {ref}
         object={gltf.scene}
         position={[0, 0, 0]}
-        scale={[1, 1, 1]}
+        scale={[10, 10, 10]}
       />
     </Suspense>
   );
