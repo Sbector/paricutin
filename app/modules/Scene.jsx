@@ -8,9 +8,11 @@ export default function Scene() {
   return (
     <Canvas
       camera={{ position: [0, 0, 1.5] }}
-      gl={{ toneMapping: ACESFilmicToneMapping, toneMappingExposure: 2.5 }}
+      gl={{ toneMapping: ACESFilmicToneMapping, toneMappingExposure: 1 }}
     >
       <ambientLight intensity={3} />
+      <directionalLight intensity={3} position={[2,2,1]} />
+      <directionalLight intensity={2} position={[-4,0,-1]} color={'#8cdbeb'}/>
       <Model />
       <TrackballControls
         target={[0, 0, 0]}
