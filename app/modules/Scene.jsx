@@ -5,7 +5,6 @@ import { ACESFilmicToneMapping } from "three";
 import Paricutin from "./Paricutin";
 import { Suspense } from "react";
 
-console.log(Paricutin)
 export default function Scene() {
   return (
     <Canvas
