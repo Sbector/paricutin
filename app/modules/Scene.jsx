@@ -11,7 +11,7 @@ export default function Scene() {
       camera={{ position: [0, 0, 1.5] }}
       gl={{ toneMapping: ACESFilmicToneMapping, toneMappingExposure: 1 }}
     >
-      <ambientLight intensity={3} />
+      <ambientLight intensity={2} />
       <directionalLight intensity={0.1} position={[2,2,1]} color={'#ffffff'}/>
       <directionalLight intensity={0.2} position={[-4,0,-1]} color={'#ffffff'}/>
 
@@ -19,13 +19,13 @@ export default function Scene() {
       
       <TrackballControls
         target={[0, 0, 0]}
-        minDistance={0.9}
+        minDistance={1}
         maxDistance={3}
         noPan
         rotateSpeed={4}
       />
       <Suspense>
-        <Paricutin scale={[10, 10, 10]}/>
+        <Paricutin scale={[10, 10, 10]} rotation={[2, 1, 0]}/>
       </Suspense>
     </Canvas>
   );
