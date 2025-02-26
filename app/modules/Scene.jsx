@@ -1,6 +1,6 @@
 'use client'
 import { Canvas } from "@react-three/fiber";
-import { TrackballControls } from "@react-three/drei";
+import { Environment, TrackballControls } from "@react-three/drei";
 import { ACESFilmicToneMapping } from "three";
 import Paricutin from "./Paricutin";
 import { Suspense } from "react";
@@ -11,9 +11,11 @@ export default function Scene() {
       camera={{ position: [0, 0, 1.5] }}
       gl={{ toneMapping: ACESFilmicToneMapping, toneMappingExposure: 1 }}
     >
-      <ambientLight intensity={4} />
-      <directionalLight intensity={2} position={[2,2,1]} color={'#ffffff'}/>
-      <directionalLight intensity={3} position={[-4,0,-1]} color={'#ffffff'}/>
+      <ambientLight intensity={3} />
+      <directionalLight intensity={0.1} position={[2,2,1]} color={'#ffffff'}/>
+      <directionalLight intensity={0.2} position={[-4,0,-1]} color={'#ffffff'}/>
+
+      <Environment preset="warehouse"/>
       
       <TrackballControls
         target={[0, 0, 0]}
