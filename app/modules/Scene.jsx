@@ -25,7 +25,7 @@ export default function Scene() {
         rotateSpeed={4}
       />
       <Suspense>
-        <Paricutin scale={[10, 10, 10]} rotation={[2, 1, 0]}/>
+        <Paricutin scale={[1, 1, 1]} rotation={[2, 1, 0]}/>
       </Suspense>
     </Canvas>
   );

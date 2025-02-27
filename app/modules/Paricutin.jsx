@@ -6,20 +6,19 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Paricutin(props) {
-    const { nodes, materials } = useGLTF('./models/paricutin.glb')
-    return (
-        <group {...props} dispose={null}>
-            <mesh
-                castShadow
-                receiveShadow
-                geometry={nodes.Remesh.geometry}
-                material={materials.Paricutin}
-                material-envMapIntensity = {1.2}
-                material-roughness = {1}
-                material-metalness = {0.0}
-            />
-        </group>
-    )
+  const { nodes, materials } = useGLTF('./models/pariutin.glb')
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Paricutin.geometry}
+        material={materials.Paricutin}
+        rotation={[0, 0, 0]}
+        scale={0.1}
+      />
+    </group>
+  )
 }
 
-useGLTF.preload('./models/paricutin.glb')
+useGLTF.preload('./models/pariutin.glb')
