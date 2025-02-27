@@ -15,7 +15,7 @@ export default function Paricutin(props) {
         geometry={nodes.Paricutin.geometry}
         material={materials.Paricutin}
         rotation={[0, 0, 0]}
-        scale={0.1}
+        scale={0.04}
       />
     </group>
   )
