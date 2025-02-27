@@ -6,7 +6,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Paricutin(props) {
-  const { nodes, materials } = useGLTF('./models/pariutin.glb')
+  const { nodes, materials } = useGLTF('./models/paricutin.glb')
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -22,4 +22,4 @@ export default function Paricutin(props) {
   )
 }
 
-useGLTF.preload('./models/pariutin.glb')
+useGLTF.preload('./models/paricutin.glb')
