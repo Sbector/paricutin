@@ -13,34 +13,34 @@ export default function Scene() {
       camera={{ position: [0, 0, 1.5] }}
       gl={{ toneMapping: ACESFilmicToneMapping, toneMappingExposure: 1 }}
     >
-      <color args={['#000000']} attach="background" />
+      <color args={['#18181b']} attach="background" />
       <ambientLight intensity={2} />
-      <directionalLight intensity={0.1} position={[2, 2, 1]} color={'#ffffff'} />
-      <directionalLight intensity={0.13} position={[-4, 0, -1]} color={'#ffffff'} />
+      {/* <directionalLight intensity={0.1} position={[2, 2, 1]} color={'#ffffff'} /> */}
+      {/* <directionalLight intensity={0.3} position={[-4, 0, -1]} color={'#ffffff'} /> */}
 
       <Environment
         // background
         // preset="warehouse"
-        esolution={ 32 }
-        backgroundBlurriness={0.0}
+        resolution={ 32 }
+        // backgroundBlurriness={0}
         backgroundIntensity={0.1}
       >
         <color args={['#000000']} attach="background" />
         <Lightformer 
         position-z={-30} 
-        scale={20} 
-        intensity={3} 
+        scale={40} 
+        intensity={4} 
         form="ring"/>
         <Lightformer 
         position-z={30} 
-        scale={20} 
-        intensity={3} 
+        scale={40} 
+        intensity={4} 
         form="ring"/>
       </Environment>
 
       <TrackballControls
         target={[0, 0, 0]}
-        minDistance={1}
+        minDistance={1.5}
         maxDistance={3}
         noPan
         rotateSpeed={2.5}
